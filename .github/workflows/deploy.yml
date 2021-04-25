@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  CF_EMAIL: ${{ secrets.CF_EMAIL }}
+  CF_API_KEY: ${{ secrets.CF_API_KEY }}
+  CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+  CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create wrangler.toml
+        run: ./scripts/make-wrangler.sh
+
+      - name: Publish
+        run: ./scripts/publish.sh
