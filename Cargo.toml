@@ -1,5 +1,5 @@
 [package]
-name = "rusty-cloudflare-worker"
+name = "website-cache-worker"
 version = "0.1.0"
 authors = ["Esteban Borai <estebanborai@gmail.com>"]
 edition = "2018"

@@ -162,24 +162,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rusty-cloudflare-worker"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "cfg-if 1.0.0",
- "console_error_panic_hook",
- "http",
- "serde",
- "serde_json",
- "url",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "wasm-bindgen-test",
- "wee_alloc",
-]
-
-[[package]]
 name = "ryu"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -385,6 +367,24 @@ checksum = "8be2398f326b7ba09815d0b403095f34dd708579220d099caae89be0b32137b2"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "website-cache-worker"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "cfg-if 1.0.0",
+ "console_error_panic_hook",
+ "http",
+ "serde",
+ "serde_json",
+ "url",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "wasm-bindgen-test",
+ "wee_alloc",
 ]
 
 [[package]]
