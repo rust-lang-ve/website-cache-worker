@@ -2,7 +2,7 @@
   <div align="center" style="display: block; text-align: center;">
     <img src="./assets/ferris_wasm.png" width="200" />
   </div>
-  <h1 align="center">rusty-cloudflare-worker</h1>
+  <h1 align="center">website-cache-worker</h1>
   <h4 align="center">👷🏻‍♂️ Rust Cloudflare Worker to handle HTTP requests</h4>
 </div>
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORKER_NAME="rusty-cloudflare-worker"
+WORKER_NAME="website-cache"
 CF_ACCOUNT_ID="<Provide your Account ID from Cloudflare Workers Website>"
 WORKERS_DEV=true
 
