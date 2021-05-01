@@ -1,0 +1,28 @@
+name: 'Manual Deploy'
+
+on: 
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'The branch, tag or SHA to checkout'
+        required: false
+        default: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      CF_EMAIL: ${{ secrets.CF_EMAIL }}
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+
+    steps:
+      - uses: actions/checkout@v2
+        ref: ${{ github.event.inputs.ref }}
+
+      - name: Create wrangler.toml
+        run: ./scripts/make-wrangler.sh
+
+      - name: Publish
+        run: ./scripts/publish.sh
