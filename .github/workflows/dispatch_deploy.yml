@@ -19,7 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        ref: ${{ github.event.inputs.ref }}
+        with:
+          ref: ${{ github.event.inputs.ref }}
 
       - name: Create wrangler.toml
         run: ./scripts/make-wrangler.sh
